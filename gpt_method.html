@@ -1,0 +1,12 @@
+<!-- div para introducir texto a un campo  -->
+<div class="cuerpoNota" style="height: 75%; padding-right: 3%">
+							<textarea name="notaBody" id="notaBody" cols="30" placeholder="Escribe tu nota aquí..."
+								[(ngModel)]="service.bodyNota" (ngModelChange)="accionAlCambiarTexto()"></textarea>
+						</div>
+
+
+<!-- campo para llamar a la api de chatgpt  -->
+
+<button class="btn btn-primary" (click)="corregirTexto(service.bodyNota)">
+								Crea nota medica con IA
+							</button>
